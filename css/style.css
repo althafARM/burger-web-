@@ -69,6 +69,19 @@ p {
     margin-bottom: 1.75rem;
 }
 
+.btn {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 0.375rem 0.75rem;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    font-weight: 400;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
 body {
     font-family: var(--ff-primary);
     font-size: 0.875rem;
@@ -88,7 +101,7 @@ body {
     cursor: pointer;
     /*height: 32px;
     width: 32px;*/
-    
+    z-index: 1;
 }
 
 #nav-check {
@@ -107,7 +120,7 @@ body {
     height: 100%;
     transform: translateX(-100%);
     transition: var(--transition);
-    
+    z-index: 3;
 }
 
 .navbar h3 {
@@ -202,6 +215,7 @@ body {
     font-weight: 400;
     text-shadow: 2px 5px 5px var(--clr-primary);
     background: fixed;
+    animation: flame 1s infinite;
 }
 .banner a {
     background: fixed;
@@ -221,4 +235,16 @@ body {
     75% {
         text-shadow: 0 -5px 15px rgba(255,69,0,0.8),0 -5px 30px rgba(255,69,0,0.6), 0 -5px 45px rgba(255,69,0,0.4), 0 -5px 60px rgba(255,69,0,0.2);
     }
+}
+
+.banner-btn {
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 100px;
+    background-image: linear-gradient(180deg, var(--clr-primary) 80%, var(--clr-secondary));
+}
+
+.banner-btn:hover {
+    outline: 0.125rem solid var(--clr-primary);
+    outline-offset: 0.25rem;
 }

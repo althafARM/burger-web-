@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(34, 31, 31);
+    background-color: rgb(255, 255, 255);
     
 }
 
@@ -91,6 +91,40 @@ body {
     
 }
 
+.btn:hover{
+    background-color: var(--clr-primary-light);
+}
+
+.clearfix::after, .clearfix::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.section-center {
+    padding: 4rem 0;
+    width: 85vw;
+    margin: 8 auto;
+    max-width: 1170px;
+}
+
+.section-title h3 {
+    font-family: var(--ff-design);
+    color: var(--clr-primary);
+    font-size: 2rem;
+}
+
+.section-title {
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+    .section-center{
+        width: 95%;
+        padding: 4rem 1rem;
+    }
+    
+}
 /* Navbar */
 
 .nav-btn svg{
@@ -247,4 +281,95 @@ body {
 .banner-btn:hover {
     outline: 0.125rem solid var(--clr-primary);
     outline-offset: 0.25rem;
+}
+
+.content-divider {
+    height: 0.5rem;
+    background-image: linear-gradient(to left,var(--clr-primary), var(--clr-secondary), var(--clr-primary));
+}
+
+/* features */
+
+.features {
+    background-color: var(--clr-grey-3);
+    cursor: pointer;
+}
+.feature {
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--transition);
+    
+}
+.feature-icon svg {
+    transition: var(--transition);
+}
+.feature-title {
+    text-transform: uppercase;
+}
+.feature-text {
+    color: var(--clr-grey-2);
+    max-width: 17rem;
+    margin: 0 auto;
+}
+.feature:hover {
+    background-color: var(--clr-white);
+    box-shadow: 0 2px var(--clr-primary);
+}
+
+.feature:hover .feature-title {
+    color: var(--clr-primary);
+}
+.feature:hover .feature-icon svg {
+    fill: var(--clr-primary);
+    transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px) {
+    .feature{
+        width: 50%;
+        float: left;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .feature{
+        width: 25%;
+    }
+}
+
+/** about **/
+
+.about-img,.about-info {
+    padding: 2rem 0;
+}
+
+.about-picture-container {
+    background-color: var(--clr-primary);
+    max-width: 30rem;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.about-picture {
+    transition: var(--transition);
+}
+
+.about-picture-container:hover .about-picture {
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+.about-text {
+    max-width: 26rem;
+    color: var(--clr-grey-2);
+}
+
+@media screen and (min-width: 992px) {
+    .about-img, .about-info {
+        float: left;
+        width: 50%;
+    }
+    .about-info {
+        paddi
+    }
 }
